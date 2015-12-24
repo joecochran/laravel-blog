@@ -6,7 +6,7 @@
         <h2>
             <a href="{{ action('PostsController@show', $post->id) }}">{{ $post->title }}</a>
         </h2>
-        <div class="post">{{ $post->body }}</div>
+        <div class="post">{!! $post->body !!}</div>
     </article>
     @endforeach
 @stop
