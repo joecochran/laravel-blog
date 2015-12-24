@@ -2,10 +2,10 @@
 
 use Illuminate\Database\Seeder;
 
-class PostsTableSeeder extends Seeder 
+class PostsTableSeeder extends Seeder
 {
 
-	public function run()
+    public function run()
     {
         DB::table('posts')->truncate();
         $posts = array(
