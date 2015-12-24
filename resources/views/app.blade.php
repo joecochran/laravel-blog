@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title></title>
-    <style>
-    .site-title {
-        font-weight: bold;
-        display: block;
-        font-size: 2.5em;
-    }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="/" class="site-title">Blog</a>
+            <nav>
+                <a href="/" class="site-title">Blog</a>
+                <a href="/authors">Authors</a>
+            </nav>
+            <hr>
         </header>
     @yield('content')
         <footer>
+            <hr>
             <p><small>Copyright &copy; {{ date('Y') }} All rights reserved</small></p>
         </footer>
     </div>

@@ -11,6 +11,9 @@
 |
 */
 
+
+Route::get('authors', 'AuthorsController@index');
+Route::get('authors/{id}', 'AuthorsController@show');
 Route::get('/', 'PostsController@index');
 Route::get('{id}', 'PostsController@show');
 /*

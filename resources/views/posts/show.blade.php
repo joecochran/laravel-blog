@@ -5,6 +5,7 @@
         <h1>
             {{ $post->title }}
         </h1>
-        <div class="post">{{ $post->body }}</div>
+        <time datetime="{{ $post->created_at }}">{{ date('F j, Y', strtotime($post->created_at)) }}</time>
+        <div class="post">{!! $post->body !!}</div>
     </article>
 @stop
