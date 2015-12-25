@@ -12,7 +12,7 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::latest('published_at')->published()->get();
 
         return view('posts.index', compact('posts'));
     }
@@ -22,5 +22,14 @@ class PostsController extends Controller
         $post = Post::findOrFail($id);
 
         return view('posts.show', compact('post'));
+    }
+
+    public function create()
+    {
+        return 'view to create post';
+    }
+    public function store()
+    {
+        return 'store';
     }
 }
