@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Request;
-
 use App\Post;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -32,7 +31,6 @@ class PostsController extends Controller
     }
     public function store()
     {
-        $post = Request::all();
         Post::create(Request::all());
         return redirect('/');
     }

@@ -12,7 +12,8 @@
             {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
         </div>
         <div class="form-group">
-            {!! Form::input('date', 'published_at', date('Y-m-d')) !!}
+            {!! Form::label('published_at', "Publish On:") !!}
+            {!! Form::input('date', 'published_at', date('Y-m-d'), ['class' => 'form-control']) !!}
         </div>
         {!! Form::submit('Create Post', ['class' => 'btn btn-primary']) !!}
     {!! Form::close() !!}

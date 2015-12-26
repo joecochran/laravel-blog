@@ -9,7 +9,8 @@ class Post extends Model
 {
     protected $fillable = [
         'title',
-        'body'
+        'body',
+        'published_at'
     ];
 
     protected $dates = ['published_at'];
@@ -17,5 +18,10 @@ class Post extends Model
     public function scopePublished($query)
     {
         $query->where('published_at', '<=', Carbon::now());
+    }
+
+    public function setPublishedAttribute($date)
+    {
+        $this->attribute['published_at'] = Carbon::parse($date);
     }
 }
