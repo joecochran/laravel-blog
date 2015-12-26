@@ -21,7 +21,6 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
 
-        dd($post);
         return view('posts.show', compact('post'));
     }
 
