@@ -14,8 +14,10 @@
 
 Route::get('authors', 'AuthorsController@index');
 Route::get('authors/{id}', 'AuthorsController@show');
+Route::get('posts/create', 'PostsController@create');
+Route::post('posts', 'PostsController@store');
 Route::get('/', 'PostsController@index');
-Route::get('{id}', 'PostsController@show');
+Route::get('posts/{id}', 'PostsController@show');
 /*
 |--------------------------------------------------------------------------
 | Application Routes

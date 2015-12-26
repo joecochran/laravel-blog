@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
 
 use App\Post;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
 class PostsController extends Controller
 {
@@ -21,15 +22,18 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
 
+        dd($post);
         return view('posts.show', compact('post'));
     }
 
     public function create()
     {
-        return 'view to create post';
+        return view('posts.create');
     }
     public function store()
     {
-        return 'store';
+        $post = Request::all();
+        Post::create(Request::all());
+        return redirect('/');
     }
 }
