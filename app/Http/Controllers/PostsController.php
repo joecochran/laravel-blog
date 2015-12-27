@@ -6,6 +6,8 @@ use App\Post;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 
 class PostsController extends Controller
 {
@@ -50,9 +52,37 @@ class PostsController extends Controller
      * @param CreatePostRequest $request
      * @return Response
      */
-    public function store(Requests\CreatePostRequest $request)
+    public function store(PostRequest $request)
     {
         Post::create($request->all());
         return redirect('/');
+    }
+
+    /**
+     * Edit an existing article
+     * 
+     * @param integer $id
+     * @return Response
+     */
+    public function edit($id)
+    {
+        $post = Post::findOrFail($id);
+
+        return view('posts.edit', compact('post'));
+    }
+
+    /**
+     * Update an existing post
+     *
+     * @param integer $id
+     * @param PostRequest $request
+     * @return Response
+     */
+    public function update($id, PostRequest $request)
+    {
+        $post = Post::findOrFail($id);
+        $post->update($request->all());
+
+        return redirect('posts');
     }
 }
