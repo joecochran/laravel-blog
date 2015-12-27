@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Request;
 use App\Post;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -28,9 +27,9 @@ class PostsController extends Controller
     {
         return view('posts.create');
     }
-    public function store()
+    public function store(Requests\CreatePostRequest $request)
     {
-        Post::create(Request::all());
+        Post::create($request->all());
         return redirect('/');
     }
 }

@@ -2,6 +2,15 @@
 
 @section('content')
     <h1>Create new post</h1>
+    @if($errors->any())
+    <div class="alert alert-danger" role="alert">
+        <ul>
+        @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
     {!! Form::open(['action' => 'PostsController@store']) !!}
         <div class="form-group">
             {!! Form::label('title', 'Title:') !!}
