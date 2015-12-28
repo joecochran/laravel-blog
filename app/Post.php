@@ -24,4 +24,9 @@ class Post extends Model
     {
         $this->attribute['published_at'] = Carbon::parse($date);
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
