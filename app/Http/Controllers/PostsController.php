@@ -54,7 +54,8 @@ class PostsController extends Controller
      */
     public function store(PostRequest $request)
     {
-        Post::create($request->all());
+        $post = new Post($request->all());
+        \Auth::user()->posts()->save($post);
         return redirect('/');
     }
 
