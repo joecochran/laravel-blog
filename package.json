@@ -1,10 +1,14 @@
 {
   "private": true,
   "devDependencies": {
-    "gulp": "^3.8.8"
+    "gulp": "^3.8.8",
+    "gulp-connect-php": "0.0.7",
+    "laravel-elixir-serve": "git+ssh://git@github.com/joecochran/laravel-elixir-serve.git"
   },
   "dependencies": {
+    "bootstrap-sass": "^3.0.0",
+    "jquery": "^2.2.0",
     "laravel-elixir": "^4.0.0",
-    "bootstrap-sass": "^3.0.0"
+    "vue": "^1.0.14"
   }
 }

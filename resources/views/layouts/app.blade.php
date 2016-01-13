@@ -8,12 +8,9 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font&#45;awesome/4.4.0/css/font&#45;awesome.min.css" rel='stylesheet' type='text/css'> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'> -->
 
     <!-- Styles -->
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-    <link href="/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 
     <style>
         body {
@@ -76,8 +73,6 @@
     @yield('content')
 
     <!-- JavaScripts -->
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-    <script src="/js/vendor/jquery.min.js"></script>
-    <script src="/js/vendor/bootstrap.min.js"></script>
+    <script src="{{ elixir('js/app.js') }}"></script>
 </body>
 </html>
