@@ -10,16 +10,10 @@
     <!-- Fonts -->
 
     <!-- Styles -->
-    <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
 
     <style>
-        body {
-            font-family: 'Helvetica Nueue', Helvetica, Arial, Sans-serif;
-        }
 
-        .fa-btn {
-            margin-right: 6px;
-        }
     </style>
 </head>
 <body id="app-layout">
@@ -73,6 +67,6 @@
     @yield('content')
 
     <!-- JavaScripts -->
-    <script src="{{ elixir('js/app.js') }}"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

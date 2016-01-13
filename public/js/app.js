@@ -21719,11 +21719,7 @@ return jQuery;
 
 window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
-require('vue');
-
-$(document).ready(function () {
-    console.log($.fn.tooltip.Constructor.VERSION);
-});
+var Vue = require('vue');
 
 },{"bootstrap-sass":1,"jquery":2,"vue":3}]},{},[4]);
 
